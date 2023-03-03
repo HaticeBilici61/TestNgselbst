@@ -3,20 +3,17 @@ package team.utilities;
 import org.apache.commons.io.FileUtils;
 //import org.apache.poi.hpsf.Date;
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 import team.pages.HomePageUS3;
 import team.pages.HomePageUS4;
 
-import java.util.Date;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.util.*;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 import java.util.function.Function;
 
 import static org.testng.AssertJUnit.assertFalse;
@@ -297,14 +294,15 @@ public class ReusableMethods {
         HomePageUS3 homePage3 = new HomePageUS3();
        // try {
             Driver.getDriver().get(ConfigReader.getProperty("url"));
+            ReusableMethods.waitFor(3);
            homePage3 .signIn.click();
-            ReusableMethods.waitFor(2);
+            ReusableMethods.waitFor(3);
            homePage3.email.sendKeys(ConfigReader.getProperty("positive_email"));
-            ReusableMethods.waitFor(2);
+            ReusableMethods.waitFor(3);
             homePage3.password.sendKeys(ConfigReader.getProperty("positive_password"));
-            ReusableMethods.waitFor(2);
+            ReusableMethods.waitFor(3);
             homePage3.signInButonu.click();
-            ReusableMethods.waitFor(2);
+            ReusableMethods.waitFor(3);
      //   } catch (Exception e) {
 
 //        }
@@ -313,7 +311,10 @@ public class ReusableMethods {
 //        } catch (Exception e) {
 //        }
 
-    }}
+    }
+
+
+    }
 
          /*
      hangi tur tool lari kullaniyorsunuz

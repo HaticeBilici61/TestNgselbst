@@ -1,6 +1,6 @@
 package team.utilities;
 
-import java.io.FileInputStream;
+import java.io.*;
 import java.util.Properties;
 
 
@@ -36,4 +36,22 @@ import java.util.Properties;
             return value;
         }
 
+        public static String setProperty(String key, String value) {
+            Properties properties = new Properties();
+            try {
+                InputStream inputStream = new FileInputStream("configuration.properties");
+                properties.load(inputStream);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            properties.setProperty(key, value);
+            try {
+                OutputStream outputStream = new FileOutputStream("configuration.properties");
+                properties.store(outputStream, null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return key;
+
+        }
     }

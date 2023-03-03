@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true"
           name="C:/Users/zafer/IdeaProjects/TestNGTeamProject/src/test/java/team/tests/Hatice">
         <classes>
-            <class name="team.tests.Hatice.Hatice_US03">
+            <class name="team.tests.Hatice_US03">
                 <methods>
                     <include name="pozitiveTestUS3TC1TC2"/>
                     <include name="negativeTestNotFirstNameUS3"/>
@@ -15,7 +15,7 @@
                     <include name="negativeTestNotPhoneUS3"/>
                 </methods>
             </class>
-            <class name="team.tests.Hatice.Hatice_US04">
+            <class name="team.tests.Hatice_US04">
                 <methods>
                     <include name="pozitiveTestUS4TC1TC2"/>
                     <include name="negativeTestNotFirstNameUS4"/>

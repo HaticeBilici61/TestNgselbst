@@ -1,4 +1,4 @@
-package team.tests.Hatice;
+package team.tests;
 
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;

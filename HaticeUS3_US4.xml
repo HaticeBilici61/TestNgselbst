@@ -5,7 +5,7 @@
     </listeners>
     <test name="Smoke Test">
         <packages>
-            <package name="team.tests.Hatice"></package>
+            <package name="team.tests"></package>
 
         </packages>
     </test>
